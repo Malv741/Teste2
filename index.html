@@ -24,7 +24,7 @@
             }
         );
         scanner.addListener('scan', function(content) {
-            alert('Escaneou o conteúdo: ' + content);
+            alert('Dados do paciente escaneados com sucesso, você será redirecionado a uma pagina de login!! ' );
             window.open(content, "_blank");
         });
         Instascan.Camera.getCameras().then(cameras =>
