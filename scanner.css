@@ -1,0 +1,16 @@
+body{
+    background-color: var(--azul-escuro);
+}
+
+.textoCamera {
+    font-size: 2rem;
+    color: var(--verde-claro);
+    text-align: center;
+    margin-top: 20vh;
+    font-family: 'Ubuntu';
+}
+
+.video {
+    margin-left: auto;
+    margin-right: auto;
+}

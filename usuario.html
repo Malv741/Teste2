@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./var.css">
+    <link rel="stylesheet" href="./usuario.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary cabecalho">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ComHelth</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Dropdown</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <main class="principal">
+        <section class="informacoes">
+                <img src="./images/rosot.png" alt="" class="imagemUsuario">
+                <div class="campoInicio">
+                    <h1 class="tituloPaciente">Paciente 01</h1>
+                    <p class="textoPaciente"><b>Idade: </b> 47 anos.</p>
+                    <p class="textoPaciente"><b>Peso: </b> 65 Kg.</p>
+                    <p class="textoPaciente"><b>Estado: </b> Estável.</p>
+                    <p class="textoPaciente"><b>Previsão de alta: </b> 5 dias.</p>
+                    <p class="textoPaciente"><b>Dia de entrada: </b> 08/10/2024</p>
+                </div>
+        </section>
+        <section class="informacoesAdicionais">
+            <div class="medicamentos">
+                <h1 class="tituloRemedio">Medicamentos: </h1>
+                <div class="tituloAdicional" onclick="mostraDescricao()">
+                    <img src="./images/poligono.svg" alt="" class="triangulo">
+                    <h2 class="remedio">Ibuprofeno</>
+                </div>
+                <p class="descricaoRemedio" id="descricao" style="display: none;"> - Redução da febre e alívio de dores, tais como: dores decorrentes de gripes e resfriados, dor de garganta, dor de cabeça, dor de dente, dor nas costas, cólicas menstruais e dores musculares.</p>
+                <div class="tituloAdicional" onclick="mostraDescricao1()">
+                    <img src="./images/poligono.svg" alt="" class="triangulo">
+                    <h2 class="remedio">Dipirona</h2>
+                </div>
+                <p class="descricaoRemedio" id="descricao1" style="display: none;"> - remédio é indicado para ser usado em tratamentos de pacientes com sintomas de resfriados ou gripes, reumatismo muscular, dores de cabeça, até artrites e outras condições que causam dor no corpo.</p>
+            </div>
+            <div class="historico">
+                <h1 class="tituloHistorico">Historico do paciente</h1>
+                <p class="textoHistorico">00:00 - Paciente foi encamado.</p>
+                <p class="textoHistorico">01:00 - Paciente recebeu dipirona, para alívio da dor.</p>
+                <p class="textoHistorico">05:00 - Paciente recebeu um banho.</p>
+                <p class="textoHistorico">10:00 - Paciente recebeu uma troca de roupas.</p>
+                <p class="textoHistorico">15:00 - Paciente teve uma melhora e recebeu alta.</p>
+            </div>
+            <div class="orientacoes">
+                <h1 class="tituloOrientacoes">Orientações: </h1>
+                <p class="textoRecomendacoes">É recomendável que o paciente fique em descanso, até  que se sinta posssível melhora.</p>
+                <p class="textoRecomendacoes">Além disso é recomendável que o paciente fique longe de regiões frias, friagem</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        function mostraDescricao() {
+            var descricao = document.getElementById("descricao");
+            if (descricao.style.display === "none") {
+                descricao.style.display = "block";
+            } else {
+                descricao.style.display = "none";
+            }
+        }
+        function mostraDescricao1() {
+            var descricao = document.getElementById("descricao");
+            if (descricao1.style.display === "none") {
+                descricao1.style.display = "block";
+            } else {
+                descricao1.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
